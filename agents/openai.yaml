@@ -1,0 +1,4 @@
+interface:
+  display_name: "AE / Blender 逐帧视觉复刻"
+  short_description: "拆解参考视频的短帧节奏，制作可编辑 AE 动效与 Blender 三维镜头并逐帧验收"
+  default_prompt: "使用 $ae-blender-frame-recreation 分析参考视频，制作指定主题的 AE 工程、Blender 动态场景和最终成片，并按连续帧检查演出、文字、人物和素材链接。"

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "frame_origin": 0,
+  "range_convention": "start inclusive, end exclusive",
+  "fps": {"numerator": 30, "denominator": 1},
+  "width": 1920,
+  "height": 1080,
+  "active_rect": {"x": 0, "y": 132, "width": 1920, "height": 816},
+  "duration_frames": 120,
+  "shots": [
+    {
+      "id": "title",
+      "start_frame": 0,
+      "end_frame_exclusive": 48,
+      "ae_comp": "01 / TITLE",
+      "events": [
+        {"local_frame": 0, "duration_frames": 3, "action": "perspective approach"},
+        {"local_frame": 3, "duration_frames": 2, "action": "overshoot and settle"},
+        {"local_frame": 5, "duration_frames": 41, "action": "readable slow push"},
+        {"local_frame": 46, "duration_frames": 1, "action": "directional smear"},
+        {"local_frame": 47, "duration_frames": 1, "action": "colour inversion"}
+      ],
+      "protected_regions": [
+        {"purpose": "readable main title", "coordinate_space": "master pixels", "rect_format": "left,top,right,bottom", "rect": [80, 250, 850, 470]}
+      ]
+    },
+    {
+      "id": "depth-release",
+      "start_frame": 48,
+      "end_frame_exclusive": 120,
+      "ae_comp": "02 / RELEASE",
+      "blender_sequence": {"source_first_index": 1, "source_first_master_frame": 48, "frames": 72, "alpha": "verify from render"},
+      "events": [
+        {"local_frame": 0, "duration_frames": 12, "action": "gather into a regular formation"},
+        {"local_frame": 12, "duration_frames": 6, "action": "hold anticipation"},
+        {"local_frame": 18, "duration_frames": 4, "action": "burst toward camera"},
+        {"local_frame": 22, "duration_frames": 50, "action": "slow drift with sharp midground and defocused foreground"}
+      ]
+    }
+  ]
+}
